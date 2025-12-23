@@ -158,9 +158,12 @@ const Index = () => {
             <Badge className="mb-6 text-base px-6 py-2 bg-gradient-to-r from-primary to-secondary shadow-lg">
               🎨 Создаем мерч с 2021 года
             </Badge>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
               Брендируем вашу реальность
             </h1>
+            <div className="text-2xl md:text-3xl font-semibold text-primary mb-8 italic">
+              успех в каждом оттиске
+            </div>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
               Печать на одежде, мерч под ключ, корпоративное брендирование. 
               От идеи до готового изделия за 5 дней.
