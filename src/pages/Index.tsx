@@ -125,63 +125,71 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-        <div className="container mx-auto px-4 py-4">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-lg z-50 border-b shadow-sm">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Печатный цех 21
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/projects/b9728bb9-da1b-4a5e-9bbb-5a908d543092/files/69b56604-a9cb-4829-850c-76eb50e3d453.jpg" 
+                alt="Печатный цех 21" 
+                className="h-12 w-12 rounded-lg object-cover"
+              />
+              <div className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                Печатный цех 21
+              </div>
             </div>
-            <div className="hidden md:flex gap-8">
-              <a href="#home" className="hover:text-primary transition-colors">Главная</a>
-              <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
-              <a href="#catalog" className="hover:text-primary transition-colors">Каталог</a>
-              <a href="#portfolio" className="hover:text-primary transition-colors">Портфолио</a>
-              <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
-              <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
+            <div className="hidden md:flex gap-6 items-center">
+              <a href="#home" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
+              <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
+              <a href="#catalog" className="text-sm font-medium hover:text-primary transition-colors">Каталог</a>
+              <a href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">Портфолио</a>
+              <a href="#faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
+              <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
+            <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-lg hover:shadow-xl transition-all">
+              <Icon name="Phone" className="mr-2" size={16} />
               Заказать
             </Button>
           </div>
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-4 relative overflow-hidden">
+      <section id="home" className="pt-28 pb-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"></div>
         <div className="container mx-auto relative">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-gradient-to-r from-primary to-secondary">
+            <Badge className="mb-6 text-base px-6 py-2 bg-gradient-to-r from-primary to-secondary shadow-lg">
               🎨 Создаем мерч с 2021 года
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
               Брендируем вашу реальность
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
               Печать на одежде, мерч под ключ, корпоративное брендирование. 
               От идеи до готового изделия за 5 дней.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90">
+              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-xl hover:shadow-2xl transition-all">
                 <Icon name="MessageCircle" className="mr-2" size={20} />
                 Заказать мерч
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
+              <Button size="lg" variant="outline" className="text-base px-8 py-6 border-2 hover:border-primary hover:bg-primary/5 transition-all">
                 <Icon name="Download" className="mr-2" size={20} />
                 Скачать каталог
               </Button>
             </div>
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="animate-slide-up">
-                <div className="text-4xl font-bold text-primary">500+</div>
-                <div className="text-muted-foreground">Проектов</div>
+            <div className="mt-14 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+              <div className="animate-slide-up p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-primary/20">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">500+</div>
+                <div className="text-sm text-muted-foreground">Проектов</div>
               </div>
-              <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                <div className="text-4xl font-bold text-secondary">24ч</div>
-                <div className="text-muted-foreground">Срочный заказ</div>
+              <div className="animate-slide-up p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-secondary/20" style={{ animationDelay: '0.1s' }}>
+                <div className="text-3xl md:text-4xl font-bold text-secondary mb-1">24ч</div>
+                <div className="text-sm text-muted-foreground">Срочный заказ</div>
               </div>
-              <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                <div className="text-4xl font-bold text-accent">10K+</div>
-                <div className="text-muted-foreground">Изделий</div>
+              <div className="animate-slide-up p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-accent/20" style={{ animationDelay: '0.2s' }}>
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-1">10K+</div>
+                <div className="text-sm text-muted-foreground">Изделий</div>
               </div>
             </div>
           </div>
@@ -190,9 +198,9 @@ const Index = () => {
 
       <section id="services" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
-            <p className="text-xl text-muted-foreground">Полный цикл производства мерча</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Наши услуги</h2>
+            <p className="text-lg text-muted-foreground">Полный цикл производства мерча</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
@@ -202,11 +210,11 @@ const Index = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
-                    <Icon name={service.icon} className="text-white" size={28} />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 shadow-lg">
+                    <Icon name={service.icon} className="text-white" size={26} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -216,9 +224,9 @@ const Index = () => {
 
       <section id="catalog" className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Каталог изделий</h2>
-            <p className="text-xl text-muted-foreground mb-8">Выберите категорию</p>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Каталог изделий</h2>
+            <p className="text-lg text-muted-foreground mb-6">Выберите категорию</p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button
                 variant={activeFilter === 'all' ? 'default' : 'outline'}
@@ -266,12 +274,12 @@ const Index = () => {
                 <div className="h-48 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center text-8xl">
                   {product.image}
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-muted-foreground mb-4">{product.description}</p>
+                <CardContent className="p-5">
+                  <h3 className="text-xl font-bold mb-1">{product.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">{product.price}</span>
-                    <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
+                    <span className="text-xl font-bold text-primary">{product.price}</span>
+                    <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-md">
                       Заказать
                     </Button>
                   </div>
@@ -284,9 +292,9 @@ const Index = () => {
 
       <section id="portfolio" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Портфолио</h2>
-            <p className="text-xl text-muted-foreground">Примеры наших работ</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Портфолио</h2>
+            <p className="text-lg text-muted-foreground">Примеры наших работ</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolio.map((item, index) => (
@@ -295,11 +303,11 @@ const Index = () => {
                 className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="h-64 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center text-8xl">
+                <div className="h-56 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center text-7xl">
                   {item.image}
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="font-semibold text-center">{item.title}</h3>
+                  <h3 className="text-sm font-semibold text-center leading-snug">{item.title}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -309,9 +317,9 @@ const Index = () => {
 
       <section id="faq" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Вопросы и ответы</h2>
-            <p className="text-xl text-muted-foreground">Ответы на частые вопросы</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Вопросы и ответы</h2>
+            <p className="text-lg text-muted-foreground">Ответы на частые вопросы</p>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
@@ -321,10 +329,10 @@ const Index = () => {
                 className="border-2 rounded-lg px-6 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                <AccordionTrigger className="text-base font-semibold hover:text-primary py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base">
+                <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -335,51 +343,51 @@ const Index = () => {
 
       <section id="contacts" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto max-w-2xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Свяжитесь с нами</h2>
-            <p className="text-xl text-muted-foreground">Оставьте заявку и мы свяжемся с вами</p>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Свяжитесь с нами</h2>
+            <p className="text-lg text-muted-foreground">Оставьте заявку и мы свяжемся с вами</p>
           </div>
           <Card className="border-2 shadow-xl">
-            <CardContent className="p-8">
-              <form className="space-y-6">
+            <CardContent className="p-6 md:p-8">
+              <form className="space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Ваше имя</label>
-                  <Input placeholder="Иван Иванов" className="border-2" />
+                  <label className="block text-sm font-medium mb-2">Ваше имя</label>
+                  <Input placeholder="Иван Иванов" className="h-11" />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Телефон</label>
-                  <Input placeholder="+7 (999) 123-45-67" className="border-2" />
+                  <label className="block text-sm font-medium mb-2">Телефон</label>
+                  <Input placeholder="+7 (999) 123-45-67" className="h-11" />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Email</label>
-                  <Input type="email" placeholder="example@mail.ru" className="border-2" />
+                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <Input type="email" placeholder="example@mail.ru" className="h-11" />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Сообщение</label>
-                  <Textarea placeholder="Расскажите о вашем проекте..." rows={5} className="border-2" />
+                  <label className="block text-sm font-medium mb-2">Сообщение</label>
+                  <Textarea placeholder="Расскажите о вашем проекте..." rows={4} />
                 </div>
-                <Button className="w-full text-lg py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90">
-                  <Icon name="Send" className="mr-2" size={20} />
+                <Button className="w-full text-base py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-lg hover:shadow-xl transition-all">
+                  <Icon name="Send" className="mr-2" size={18} />
                   Отправить заявку
                 </Button>
               </form>
             </CardContent>
           </Card>
-          <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 bg-white rounded-xl border-2">
-              <Icon name="Phone" className="mx-auto mb-3 text-primary" size={32} />
-              <div className="font-semibold">Телефон</div>
-              <div className="text-muted-foreground">+7 (999) 123-45-67</div>
+          <div className="mt-10 grid md:grid-cols-3 gap-4 text-center">
+            <div className="p-5 bg-white rounded-xl border shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="Phone" className="mx-auto mb-2 text-primary" size={28} />
+              <div className="text-sm font-semibold mb-1">Телефон</div>
+              <div className="text-sm text-muted-foreground">+7 (999) 123-45-67</div>
             </div>
-            <div className="p-6 bg-white rounded-xl border-2">
-              <Icon name="Mail" className="mx-auto mb-3 text-secondary" size={32} />
-              <div className="font-semibold">Email</div>
-              <div className="text-muted-foreground">info@print21.ru</div>
+            <div className="p-5 bg-white rounded-xl border shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="Mail" className="mx-auto mb-2 text-secondary" size={28} />
+              <div className="text-sm font-semibold mb-1">Email</div>
+              <div className="text-sm text-muted-foreground">info@print21.ru</div>
             </div>
-            <div className="p-6 bg-white rounded-xl border-2">
-              <Icon name="MapPin" className="mx-auto mb-3 text-accent" size={32} />
-              <div className="font-semibold">Адрес</div>
-              <div className="text-muted-foreground">Москва, ул. Примерная 21</div>
+            <div className="p-5 bg-white rounded-xl border shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="MapPin" className="mx-auto mb-2 text-accent" size={28} />
+              <div className="text-sm font-semibold mb-1">Адрес</div>
+              <div className="text-sm text-muted-foreground">Москва, ул. Примерная 21</div>
             </div>
           </div>
         </div>
