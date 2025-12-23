@@ -128,15 +128,12 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-lg z-50 border-b shadow-sm">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img 
-                src="https://cdn.poehali.dev/projects/b9728bb9-da1b-4a5e-9bbb-5a908d543092/files/69b56604-a9cb-4829-850c-76eb50e3d453.jpg" 
+                src="https://cdn.poehali.dev/files/Лого ПЦ21.png" 
                 alt="Печатный цех 21" 
-                className="h-12 w-12 rounded-lg object-cover"
+                className="h-14 w-auto"
               />
-              <div className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Печатный цех 21
-              </div>
             </div>
             <div className="hidden md:flex gap-6 items-center">
               <a href="#home" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
